@@ -1,0 +1,26 @@
+export type KeyswitchType =  'linear' | 'speed linear' | 'tactile' | 'clicky' | '';
+
+export type Keyswitch = {
+    name: string,
+    name_cn: string,
+    type: KeyswitchType,
+    brand: string,
+    total_travel_mm?: number,
+    total_travel_diff?: string | number,
+    pre_travel_mm?: number,
+    pre_travel_diff?: string | number,
+    trigger_force_g?: number,
+    trigger_force_diff?: string | number,
+    colors?: string[],
+    materials?: string[],
+    price?: number,
+    life?: number,
+    release_date?: string,
+    img_src: string,
+    is_low_profile: boolean,
+    is_five_pin: boolean,
+    is_silent: boolean,
+    doubled_sided_wall: boolean,
+    double_segment_spring: boolean,
+    lighting_support?: string,
+};
