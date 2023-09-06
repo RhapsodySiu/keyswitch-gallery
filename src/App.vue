@@ -41,4 +41,8 @@ const switchesData = ref(getKeyswitchesData() as Keyswitch[]);
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
+
+footer {
+  text-align: left;
+}
 </style>

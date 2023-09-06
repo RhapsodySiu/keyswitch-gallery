@@ -135,6 +135,7 @@ data:
       - blue
     life: 100000000
     doubled_sided_wall: 1
+    lighting_support: Convex lens
     release_date: Jul 2022
     img_src: TTC_quick_silver_v2.png
   - name: Frozen silent v2

@@ -60,13 +60,14 @@ const getColorStyle = (color: string) => {
 <style lang="scss" scoped>
 .gallery {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: 1fr;
     gap: 10px;
 
     &__item {
         // border: 1px solid rgb(237, 227, 227);
         aspect-ratio: 1 / 1;
         position: relative;
+        margin-bottom: 24px;
         
         &__inner {
             border: 1px dashed gray;
@@ -197,27 +198,37 @@ const getColorStyle = (color: string) => {
     }
 }
 
-// TODO: construct in for-loop
-.gallery .gallery__item:nth-child(5n+1) {
-    grid-column: 1 / span 2;
-}
+@media (min-width: 769px) {
+    .gallery {
+        grid-template-columns: repeat(6, 1fr);
+    }
 
-.gallery .gallery__item:nth-child(5n+2) {
-    grid-column: 3 / span 2;
-}
+    .gallery__item {
+        margin-bottom: 24px;
+    }
+    
+    // TODO: construct in for-loop
+    .gallery .gallery__item:nth-child(5n+1) {
+        grid-column: 1 / span 2;
+    }
 
-.gallery .gallery__item:nth-child(5n+3) {
-    grid-column: 5 / span 2;
-}
+    .gallery .gallery__item:nth-child(5n+2) {
+        grid-column: 3 / span 2;
+    }
 
-.gallery .gallery__item:nth-child(5n+4) {
-    grid-column: 2 / span 2;
-}
+    .gallery .gallery__item:nth-child(5n+3) {
+        grid-column: 5 / span 2;
+    }
 
-.gallery .gallery__item:nth-child(5n) {
-    grid-column: 4 / span 2;
-}
+    .gallery .gallery__item:nth-child(5n+4) {
+        grid-column: 2 / span 2;
+    }
 
+    .gallery .gallery__item:nth-child(5n) {
+        grid-column: 4 / span 2;
+    }
+
+}
 
 /* 
  * ref: https://kizu.dev/fit-to-width-text/
