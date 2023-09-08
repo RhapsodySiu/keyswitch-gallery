@@ -6,20 +6,20 @@ defineProps({
 defineEmits(['update:modelValue'])
 
 const colorsOptions: [string, string][] = [
-    ['Red', 'red'],
-    ['Orange', 'orange'],
-    ['Yellow', 'yellow'],
-    ['Green', 'green'],
-    ['Lime', 'lime'],
-    ['Cyan', 'cyan'],
-    ['Blue', 'blue'],
-    ['Purple', 'purple'],
-    ['Pink', 'pink'],
-    ['Brown', '#6d4f4b'],
-    ['Gray', 'gray'],
-    ['Black', '#000'],
-    ['White', '#fff'],
-    ['Transparent', 'rgba(0, 0, 0, 0)'],
+    ['red', 'red'],
+    ['orange', 'orange'],
+    ['yellow', 'yellow'],
+    ['green', 'green'],
+    ['lime', 'lime'],
+    ['cyan', 'cyan'],
+    ['blue', 'blue'],
+    ['purple', 'purple'],
+    ['pink', 'pink'],
+    ['brown', '#6d4f4b'],
+    ['gray', 'gray'],
+    ['black', '#000'],
+    ['white', '#fff'],
+    ['transparent', 'rgba(0, 0, 0, 0)'],
 ]
 </script>
 
@@ -27,7 +27,7 @@ const colorsOptions: [string, string][] = [
   <el-tooltip
     v-for="(item, idx) in colorsOptions" 
     :key="idx"
-    :content="item[0]" 
+    :content="item[0].charAt(0).toLocaleUpperCase() + item[0].slice(1)" 
     placement="right" 
     effect="light"
   >

@@ -30,7 +30,7 @@ const resetFilter = () => {
 
 <template>
     <div class="menu">
-        <el-input class="menu__search" type="text" v-model="searchValue" placeholder="Search by name..." />
+        <el-input class="menu__search" type="text" v-model="searchValue" placeholder="Search by name, brand etc..." />
         <button class="menu__filter-button" @click="$emit('click-filter-btn')">
             <font-awesome-icon icon="fa-solid fa-filter" />
         </button>

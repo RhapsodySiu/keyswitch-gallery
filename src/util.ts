@@ -4,9 +4,10 @@ import type { FilterState, Keyswitch, KeyswitchType } from './types'
 const nilOrBoolean = (v: unknown): boolean | undefined => v === undefined || v === null ? undefined : Boolean(v)
 
 export function getKeyswitchesData(): Keyswitch[] {
-    const defaultData = data.data.shift()!
+    const dataArrCopy = data.data.slice()
+    const defaultData = dataArrCopy.shift()!
 
-    return data.data.map((d) => ({
+    return dataArrCopy.map((d) => ({
         ...d,
         type: d.type as KeyswitchType,
         double_segment_spring: nilOrBoolean(d.double_segment_spring) ?? Boolean(d.double_segment_spring),
