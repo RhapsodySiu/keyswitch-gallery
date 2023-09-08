@@ -1,4 +1,4 @@
-export type KeyswitchType =  'linear' | 'speed linear' | 'tactile' | 'clicky' | '';
+export type KeyswitchType =  'linear' | 'tactile' | 'clicky'
 
 export type Keyswitch = {
     name: string,
@@ -11,6 +11,8 @@ export type Keyswitch = {
     pre_travel_diff?: string | number,
     trigger_force_g?: number,
     trigger_force_diff?: string | number,
+    bottom_out_force_g?: number,
+    bottom_out_force_diff?: string | number,
     colors?: string[],
     materials?: string[],
     price?: number,
@@ -20,7 +22,20 @@ export type Keyswitch = {
     is_low_profile: boolean,
     is_five_pin: boolean,
     is_silent: boolean,
+    is_speedy: boolean,
     doubled_sided_wall: boolean,
     double_segment_spring: boolean,
     lighting_support?: string,
-};
+}
+
+export type FilterState = {
+    type: string,
+    force: string,
+    searchText: string,
+    colors: string[],
+    price: string,
+    durableOnly: boolean,
+    lightingOnly: boolean,
+    silentOnly: boolean,
+    speedyOnly: boolean,
+}

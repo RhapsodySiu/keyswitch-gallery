@@ -1,27 +1,43 @@
 <script setup lang="ts">
-import type { Keyswitch } from '../types';
-import { getImgUrl, getTravelText, getPreTravelText, getTriggerForceText } from '../util';
+import type { Keyswitch } from '../types'
+import {
+    getImgUrl,
+    getTravelText,
+    getPreTravelText,
+    getTriggerForceText,
+    getBottomOutForceText,
+} from '../util'
 
 interface Props {
     switchesData: Keyswitch[],
 }
 
-const props = defineProps<Props>();
+const props = defineProps<Props>()
 
 const onItemClicked = (name: string) => {
-    console.log('Clicked', name);
-};
+    console.log('Clicked', name)
+}
 
 const getColorClass = (idx: number) => ({
     'gallery__item__color': true,
     ['color' + idx]: true,
-});
+})
 
-const getColorStyle = (color: string) => {
-    return color === 'transparent' ? {} : {
-        'background-color': color,
-    };
-};
+const getColorStyle = (color: string): Record<string, string> => {
+    switch (color) {
+        case 'brown': {
+            return {
+                'background-color': '#6d4f4b',
+            }
+        }
+        case 'transparent':
+            return {}
+        default:
+            return {
+                'background-color': color,
+            }
+    }
+}
 </script>
 
 <template>
@@ -40,6 +56,7 @@ const getColorStyle = (color: string) => {
                 <div class="gallery__item__detail">
                     <div class="gallery__item__detail__inner">
                         <span>Trigger: {{ getTriggerForceText(item) }}</span><br/>
+                        <span v-if="item.bottom_out_force_g">Bottom: {{ getBottomOutForceText(item) }}</span><br v-if="item.bottom_out_force_g"/>
                         <span>Travel dist.: {{ getTravelText(item) }}</span><br/>
                         <span>Pre-travel dist.: {{ getPreTravelText(item) }}</span>
                     </div>
@@ -99,7 +116,7 @@ const getColorStyle = (color: string) => {
                 width: 80%;
                 height: 80%;
                 color: #444;
-                font-size: 1rem;
+                font-size: 0.9rem;
                 white-space: nowrap;
             }
         }

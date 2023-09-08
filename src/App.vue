@@ -1,23 +1,73 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, reactive, onMounted, onUnmounted, computed, toRef } from 'vue'
 
-import Hero from './components/Hero.vue';
-// import Menu from './components/Menu.vue';
-import Gallery from './components/Gallery.vue';
+import Hero from './components/Hero.vue'
+import FilterModal from './components/FilterModal.vue'
+import Menu from './components/Menu.vue'
+import Gallery from './components/Gallery.vue'
 
-import type { Keyswitch } from './types';
-import { getKeyswitchesData } from './util';
+ import { getDefaultFilterState, getKeyswitchesData } from './util'
 
-const switchesData = ref(getKeyswitchesData() as Keyswitch[]);
+import type { FilterState, Keyswitch } from './types'
+
+const state = reactive({
+  filter: getDefaultFilterState()
+})
+const filter = toRef(state, 'filter')
+
+const switchesData = ref(getKeyswitchesData() as Keyswitch[])
+
+const showFilter = ref(false)
+
+const screenWidth = ref(window.innerWidth)
+const isModalMode = computed(() => screenWidth.value < 769)
+
+const onFilterBtnClicked = () => {
+  showFilter.value = !showFilter.value;
+}
+const resetFilter = () => {
+  filter.value = getDefaultFilterState()
+}
+
+const updateFilter = (data: FilterState) => {
+  filter.value = data
+}
+
+const handleResize = () => {
+    screenWidth.value = window.innerWidth;
+}
+
+onMounted(() => {
+  window.addEventListener('resize', handleResize);
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', handleResize);
+})
+
+
 </script>
 
 <template>
   <Hero />
-  <!-- <Menu /> -->
-  <Gallery :switchesData=switchesData />
+  <FilterModal 
+    :show="showFilter && isModalMode"
+    :filter-state="filter"
+    @reset-filter="resetFilter"
+    @update-filter="updateFilter"
+    @close="onFilterBtnClicked"
+  />
+  <Menu
+    class="app-menu"
+    @click-filter-btn="onFilterBtnClicked" 
+    :filter-state="state.filter"
+    :show-filter="showFilter && !isModalMode"
+  />
+  <Gallery :switches-data=switchesData />
   
   <footer>
     <pre>
+      Built with Vite + Vue 3 + Typescript
       rhapsody.siu@2023
 
       Credits:
@@ -29,19 +79,9 @@ const switchesData = ref(getKeyswitchesData() as Keyswitch[]);
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.app-menu {
+  margin-bottom: 50px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-
 footer {
   text-align: left;
 }
