@@ -30,6 +30,7 @@ data:
     pin_plate_materials: silver
     is_five_pin: 1
     doubled_sided_wall: 1
+    price: 4.7
     life: 100000000
     materials:
       - POM
@@ -49,6 +50,7 @@ data:
     total_travel_mm: 3.8
     pre_travel_mm: 1.8
     life: 80000000
+    price: 2.3
     release_date: Oct 2022
     img_src: TTC_gold_red_pro.png
     lighting_support: Convex lens
@@ -61,6 +63,7 @@ data:
       - brown
       - transparent
       - gray
+    price: 2.3
     trigger_force_g: 45
     total_travel_mm: 3.8
     pre_travel_mm: 2
@@ -82,6 +85,7 @@ data:
     total_travel_diff: 0.3
     pre_travel_mm: 1.6
     pre_travel_diff: 0.3
+    price: 3.3
     life: 100000000
     spring_length_mm: 23
     spring_plate_materials: gold
@@ -110,6 +114,8 @@ data:
     trigger_force_diff: 10
     bottom_out_force_g: 58
     bottom_out_force_diff: 10
+    is_speedy: 1
+    price: 4.1
     doubled_sided_wall: 1
     life: 80000000
     img_src: TTC_light_cloud_v2.png
@@ -139,6 +145,7 @@ data:
     doubled_sided_wall: 1
     is_speedy: 1
     lighting_support: Convex lens
+    price: 3.5
     release_date: Jul 2022
     img_src: TTC_quick_silver_v2.png
   - name: Frozen silent v2
@@ -157,6 +164,7 @@ data:
     trigger_force_diff: 10
     life: 50000000
     doubled_sided_wall: 1
+    price: 3.8
     spring_plate_materials: gold
     pin_plate_materials: silver
     lighting_support: Condenser
@@ -180,6 +188,7 @@ data:
     lighting_support: Convex lens
     spring_plate_materials: gold
     pin_plate_materials: silver
+    price: 3
     release_date: Mar 2022
     img_src: TTC_gold_pink_v2.png
   - name: Sea salt Lemon Pro
@@ -214,8 +223,8 @@ data:
     pre_travel_diff: 0.6
     trigger_force_g: 35
     trigger_force_diff: 10
-    tactile_force_g: 50
-    tactile_force_diff: 10
+    bottom_out_force_g: 50
+    bottom_out_force_diff: 10
     life: 50000000
     colors:
       - lime
@@ -260,7 +269,7 @@ data:
       - white
     img_src: kailh_box_pink_silent.png
   - name: BOX Deep sea slient islet
-    name_cn: BOX
+    name_cn: 深海BOX孤岛轴PRO
     brand: Kailh
     type: linear
     is_silent: 1
@@ -272,13 +281,14 @@ data:
     pre_travel_diff: 0.4
     doubled_sided_wall: 1
     lighting_support: window
+    price: 3
     colors:
       - transparent
       - blue
     life: 100000000
     img_src: kailh_box_islet.png
   - name: BOX Deep sea silent whale
-    name_cn: BOX
+    name_cn: 深海BOX鲸落轴PRO
     brand: Kailh
     type: tactile
     is_silent: 1
@@ -291,6 +301,7 @@ data:
     bottom_out_force_g: 60
     bottom_out_force_diff: 10
     doubled_sided_wall: 1
+    price: 3
     lighting_support: window
     colors:
       - brown
@@ -298,5 +309,83 @@ data:
       - blue
     life: 100000000
     img_src: kailh_box_whale.png
-
+  - name: BOX White
+    name_cn: BOX白轴V2
+    brand: Kailh
+    type: clicky
+    total_travel_diff: 0.3
+    total_travel_mm: 3.6
+    pre_travel_diff: 0.4
+    pre_travel_mm: 1.8
+    trigger_force_g: 55
+    trigger_force_diff: 10
+    colors:
+      - white
+      - transparent
+      - black
+    lighting_support: window
+    is_five_pin: 1
+    doubled_sided_wall: 1
+    spring_length_mm: 19
+    price: 1.8
+    life: 80000000
+    img_src: kailh_box_white_v2.png
+  - name: Panda
+    name_cn: 熊猫轴
+    brand: Outemu
+    type: tactile
+    trigger_force_g: 50
+    trigger_force_diff: 10
+    bottom_out_force_g: 65
+    bottom_out_force_diff: 10
+    pre_travel_mm: 1.8
+    pre_travel_diff: 0.6
+    total_travel_mm: 3.3
+    colors:
+      - orange
+      - transparent
+      - red
+    price: 1.4
+    img_src: outemu_panda.png
+  - name: MX Black Silent
+    name_cn: MX静音黑轴
+    brand: Cherry
+    type: linear
+    trigger_force_g: 60
+    trigger_force_diff: 20
+    total_travel_mm: 3.7
+    total_travel_diff: -0.4
+    pre_travel_diff: 0.6
+    pre_travel_mm: 2
+    price: 2.2
+    is_silent: 1
+    life: 50000000
+    colors:
+      - black
+    img_src: cherry_mx_black_silent.png
+  - name: BOX Summer switch
+    name_cn: BOX知夏轴
+    brand: Kailh
+    type: clicky
+    trigger_force_g: 50
+    trigger_force_diff: 15
+    bottom_out_force_g: 55
+    bottom_out_force_diff: 15
+    pre_travel_diff: 0.4
+    pre_travel_mm: 1.8
+    total_travel_mm: 3.8
+    total_travel_diff: 0.3
+    lighting_support: window
+    materials:
+      - PC
+      - POM
+    colors:
+      - cyan
+      - white
+      - transparent
+    is_five_pin: 1
+    doubled_sided_wall: 1
+    price: 2.6
+    life: 80000000
+    img_src: kailh_box_summer.png
 
