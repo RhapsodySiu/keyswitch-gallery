@@ -169,6 +169,7 @@ onUnmounted(() => {
     :filter-state="state.filter"
     :show-filter="showFilter && !isModalMode"
   />
+  <span v-show="switchesData.length === 0">No result</span>
   <Gallery :switches-data=switchesData />
   
   <footer>
@@ -178,7 +179,9 @@ onUnmounted(() => {
 
       Credits:
       - https://kizu.dev
+      - http://www.kailh.com/
       - http://www.ttcswitch.cn/
+      - https://www.zfrontier.com/
       - https://zhuanlan.zhihu.com/p/105927020
     </pre>
   </footer>

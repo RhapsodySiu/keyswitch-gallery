@@ -79,6 +79,7 @@ const getColorStyle = (color: string): Record<string, string> => {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
+    min-height: 300px;
 
     &__item {
         // border: 1px solid rgb(237, 227, 227);

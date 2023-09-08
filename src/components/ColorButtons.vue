@@ -28,7 +28,7 @@ const colorsOptions: [string, string][] = [
     v-for="(item, idx) in colorsOptions" 
     :key="idx"
     :content="item[0].charAt(0).toLocaleUpperCase() + item[0].slice(1)" 
-    placement="right" 
+    placement="top" 
     effect="light"
   >
     <button
