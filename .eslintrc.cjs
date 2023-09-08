@@ -9,6 +9,6 @@ module.exports = {
       ecmaVersion: 2020,
     },
     rules: {
-      // Add additional rules here if needed
+      semi: ['never'],
     },
   };
