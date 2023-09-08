@@ -7,6 +7,7 @@ data:
     doubled_sided_wall: 0
     is_five_pin: 0
     is_silent: 0
+    is_speedy: 0
     low_profile: 0
     img_src: ''
   - name: Honey V2
@@ -57,7 +58,7 @@ data:
     type: tactile
     category: Brown
     colors:
-      - sienna
+      - brown
       - transparent
       - gray
     trigger_force_g: 45
@@ -70,7 +71,7 @@ data:
   - name: Flaming Purple
     name_cn: 烈焰紫轴
     brand: TTC
-    type: speed linear
+    type: linear
     category: Silver
     colors:
       - purple
@@ -86,6 +87,7 @@ data:
     spring_plate_materials: gold
     doubled_sided_wall: 1
     pin_plate_materials: silver
+    is_speedy: 1
     materials:
       - POK
     img_src: TTC_flaming_purple.png
@@ -106,19 +108,19 @@ data:
     pre_travel_diff: 0.4
     trigger_force_g: 45
     trigger_force_diff: 10
-    buttom_out_force_g: 58
-    buttom_out_force_diff: 10
+    bottom_out_force_g: 58
+    bottom_out_force_diff: 10
     doubled_sided_wall: 1
     life: 80000000
     img_src: TTC_light_cloud_v2.png
   - name: Quick silver V2
     name_cn: 快银轴V2
     brand: TTC
-    type: speed linear
+    type: linear
     category: Silver
     trigger_force_g: 45
     trigger_force_diff: 4
-    buttom_out_force_g: 55
+    bottom_out_force_g: 55
     total_travel_mm: 3.4
     total_travel_diff: -0.4
     pre_travel_mm: 1.08
@@ -135,6 +137,7 @@ data:
       - blue
     life: 100000000
     doubled_sided_wall: 1
+    is_speedy: 1
     lighting_support: Convex lens
     release_date: Jul 2022
     img_src: TTC_quick_silver_v2.png
@@ -236,3 +239,64 @@ data:
       - pink
     price: 1.5
     img_src: outemu_peach.png
+  - name: BOX silent pink switch
+    name_cn: BOX静音粉轴
+    brand: Kailh
+    type: linear
+    is_silent: 1
+    total_travel_mm: 3.6
+    total_travel_diff: 0.4
+    pre_travel_mm: 1.8
+    pre_travel_diff: 0.4
+    life: 80000000
+    trigger_force_g: 35
+    trigger_force_diff: 10
+    lighting_support: window
+    doubled_sided_wall: 1
+    price: 3.5
+    colors:
+      - pink
+      - transparent
+      - white
+    img_src: kailh_box_pink_silent.png
+  - name: BOX Deep sea slient islet
+    name_cn: BOX
+    brand: Kailh
+    type: linear
+    is_silent: 1
+    trigger_force_g: 45
+    trigger_force_diff: 10
+    total_travel_mm: 3.6
+    total_travel_diff: 0.4
+    pre_travel_mm: 1.8
+    pre_travel_diff: 0.4
+    doubled_sided_wall: 1
+    lighting_support: window
+    colors:
+      - transparent
+      - blue
+    life: 100000000
+    img_src: kailh_box_islet.png
+  - name: BOX Deep sea silent whale
+    name_cn: BOX
+    brand: Kailh
+    type: tactile
+    is_silent: 1
+    total_travel_mm: 3.6
+    total_travel_diff: 0.4
+    pre_travel_mm: 2
+    pre_travel_diff: 0.4
+    trigger_force_g: 45
+    trigger_force_diff: 10
+    bottom_out_force_g: 60
+    bottom_out_force_diff: 10
+    doubled_sided_wall: 1
+    lighting_support: window
+    colors:
+      - brown
+      - transparent
+      - blue
+    life: 100000000
+    img_src: kailh_box_whale.png
+
+
