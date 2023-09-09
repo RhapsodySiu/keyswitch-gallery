@@ -62,13 +62,11 @@ const resetFilter = () => {
     }
 
     &__search {
-        max-width: 320px;
+        max-width: 280px;
     }
 
-    @media (max-width: 768px) {
-        &__filter-panel {
-            display: none;
-        }
+    &__filter-panel {
+        display: none;
     }
 
     @media (min-width: 769px) {
@@ -81,6 +79,10 @@ const resetFilter = () => {
             overflow: hidden;
             background-color: #9f98c137;
             box-sizing: border-box;
+        }
+
+        &__search {
+            max-width: 320px;
         }
     }
 }

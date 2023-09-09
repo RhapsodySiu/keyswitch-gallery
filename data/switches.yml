@@ -248,7 +248,7 @@ data:
       - pink
     price: 1.5
     img_src: outemu_peach.png
-  - name: BOX silent pink switch
+  - name: BOX silent pink
     name_cn: BOX静音粉轴
     brand: Kailh
     type: linear
@@ -363,7 +363,7 @@ data:
     colors:
       - black
     img_src: cherry_mx_black_silent.png
-  - name: BOX Summer switch
+  - name: BOX Summer
     name_cn: BOX知夏轴
     brand: Kailh
     type: clicky
