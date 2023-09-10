@@ -71,6 +71,7 @@ const resetFilter = () => {
 
     @media (min-width: 769px) {
         &__filter-panel {
+            display: block;
             transition: all 0.3s ease;
             height: 250px;
             padding: 70px 20px 0 20px;
